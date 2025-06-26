@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    #wordDisplay {
+      font-size: 2rem;
+      margin: 20px auto;
+      letter-spacing: 10px;
+    }
+
+    #lives {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    #letters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .letter-btn {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #ff4b2b, #ff416c);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
+    }
+
+    .dashboard-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
+      transition: 0.3s ease;
+    }
+
+    .dashboard-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 114, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎯 Hangman Game</h1>
+  <div id="category">Category: <span id="categoryName">Animals</span></div>
+  <div id="lives">Lives Left: <span id="livesCount">6</span></div>
+  <div id="wordDisplay"></div>
+  <div id="letters"></div>
+  <button onclick="startGame()">Restart</button><br>
+  <a href="file:///C:/Users/WELCOME/Desktop/full/templates/index.html" class="dashboard-link">⬅️ Back to Dashboard</a>
+<script src="C:\Users\WELCOME\Desktop\full\static\js\hangman.js"></script>
+</body>
+</html>

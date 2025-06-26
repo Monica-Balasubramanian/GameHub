@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Memory Card Flip</title>
+  <link rel="stylesheet" href="C:\Users\WELCOME\Desktop\full\static\css\style.css" />
+  <style>
+        body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+    .memory-game {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      color: #333;
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card.flipped {
+      background-color: #ffd700;
+    }
+
+    #moves {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: linear-gradient(90deg, #ff4b2b, #ff416c);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Memory Card Flip Game</h1>
+  <div class="memory-game" id="game-board"></div>
+  <div id="moves">Moves: 0</div>
+  <button onclick="startGame()" style=" padding: 12px 24px;font-size: 16px; border: none; border-radius: 30px; background: linear-gradient(90deg, #ff4b2b, #ff416c); color: white; font-weight: bold; cursor: pointer;  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);">Restart<i class="fas fa-rotate-right"></i></button><br><br><br>
+  <a href="file:///C:/Users/WELCOME/Desktop/full/templates/index.html">Back to dashboard</a>
+
+  <script src="C:\Users\WELCOME\Desktop\full\static\js\memory.js"></script>
+</body>
+</html>

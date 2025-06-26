@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="C:\Users\WELCOME\Desktop\full\static\css\style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .game-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      width: 300px;
+      margin: auto;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #ff4b2b, #ff416c);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
+    }
+
+    #feedback {
+      font-size: 1.3rem;
+      margin-top: 20px;
+    }
+
+    .dashboard-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
+    }
+
+    .dashboard-link:hover {
+      background: linear-gradient(90deg, #0072ff, #00c6ff);
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 114, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎯 Guess the Number</h1>
+  <div class="game-container">
+    <p>I'm thinking of a number between <strong>1 and 100</strong>.</p>
+    <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="100">
+    <div>
+      <button onclick="checkGuess()">Check</button>
+      <button onclick="resetGame()">Restart</button>
+    </div>
+    <div id="feedback"></div>
+    <p>🎯 Attempts: <span id="attempts">0</span></p>
+  </div>
+  <a href="file:///C:/Users/WELCOME/Desktop/full/templates/index.html" class="dashboard-link">⬅️ Back to Dashboard</a>
+  <script src="C:\Users\WELCOME\Desktop\full\static\js\guess.js"></script>
+</body>
+</html>

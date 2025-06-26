@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simon Says Game</title>
+  <link rel="stylesheet" href="C:\Users\WELCOME\Desktop\full\static\css\style.css">
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+    }
+
+.simon-container {
+  padding: 40px 20px;
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+}
+
+#score, #high-score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffcc70;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.red { background: #ff4d4d; }
+.blue { background: #4d79ff; }
+.green { background: #4dff88; }
+.yellow { background: #ffff66; }
+
+.pressed {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+#start {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
+}
+
+body.game-over {
+  background-color: #ff2f2f;
+  transition: background-color 0.3s ease;
+}
+
+
+    .dashboard-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="simon-container">
+    <h1>Simon Says</h1>
+    <h2 id="level-title">Press Start to Begin</h2>
+    <h3 id="score">Score: 0</h3>
+    <h3 id="high-score">High Score: 0</h3>
+
+    <div class="buttons">
+      <div class="btn red" id="red"></div>
+      <div class="btn blue" id="blue"></div>
+      <div class="btn green" id="green"></div>
+      <div class="btn yellow" id="yellow"></div>
+    </div>
+
+    <button id="start" style=" padding: 12px 24px;font-size: 16px; border: none; border-radius: 30px; background: linear-gradient(90deg, #ff4b2b, #ff416c); color: white; font-weight: bold; cursor: pointer;  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);">Start Game</button>
+  </div><br><br>
+  <a href="file:///C:/Users/WELCOME/Desktop/full/templates/index.html">Back to dashboard</a>
+  <script src="C:\Users\WELCOME\Desktop\full\static\js\simon.js"></script>
+</body>
+</html>

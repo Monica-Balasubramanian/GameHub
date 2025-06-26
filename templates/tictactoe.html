@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="C:\Users\WELCOME\Desktop\full\static\css\style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 10px;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      color: #333;
+      font-size: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    #result {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #modeSelect {
+      margin-top: 40px;
+    }
+
+    #modeSelect button {
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .mode-select {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.mode-select h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.button-group button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ffcc70, #ff8177);
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.button-group button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 129, 119, 0.4);
+}
+
+.dashboard-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
+}
+
+.dashboard-link:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 114, 255, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div id="modeSelect" class="mode-select">
+  <h2>Select Game Mode</h2>
+  <div class="button-group">
+    <button onclick="setMode('player')">👥 2 Player Mode</button>
+    <button onclick="setMode('computer')">🤖 Play with Computer</button>
+  </div>
+</div>
+
+
+  <div class="board hidden" id="board">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+  <div id="result"></div>
+
+ <div id="restartContainer" class="hidden">
+  <button onclick="resetGame()" style="padding: 12px 24px; font-size: 16px; border: none; border-radius: 30px; background: linear-gradient(90deg, #ff4b2b, #ff416c); color: white; font-weight: bold; cursor: pointer; box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);">
+    Restart
+  </button>
+</div>
+  <br><br><br>
+<a href="file:///C:/Users/WELCOME/Desktop/full/templates/index.html" class="dashboard-link">
+  ⬅️ Back to Dashboard
+</a>
+
+  <script src="C:\Users\WELCOME\Desktop\full\static\js\tictactoe.js"></script>
+</body>
+</html>

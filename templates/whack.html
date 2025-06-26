@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Whack-a-Mole</title>
+  <link rel="stylesheet" href="C:\Users\WELCOME\Desktop\full\static\css\style.css" />
+  <style>
+      body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;}
+  
+  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      gap: 10px;
+      margin: 30px auto;
+      justify-content: center;
+    }
+
+    .square {
+      background-color: #c5e1a5;
+      border: 2px solid #33691e;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .mole {
+      background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA3gMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQUCAwcGBP/EADIQAAIBAwMCBAUDBAMBAAAAAAABAgMEEQUSITFRBhRBYQcTInGRMqHBIyRCgVJysRX/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/EAB4RAQEAAgMBAAMAAAAAAAAAAAABAhEDITESBCIy/9oADAMBAAIRAxEAPwDuIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMmNSUYQlKTSillt9EjkXiH4manU1Rx0OnBWFOWFNx3Sqe/siXKT1rHG5eOvNknm/B/iij4itZKUVTvKUU6lNdGn/kvY9GmmsroJdpZZ6kEZGSokhEN8MnIEgrNZ13TtFoOrqFzGn/xguZS+yMPDurvWrOV2reVGnvcae58yXcmxbAAoAAAAAAAAAAAAAAAAAAAAAPLfEbUHZeGLinCW2pdf0I47P8AV+2TlOlW+HiFunH1bfCOlfFOjKegUayTxRuYyk16JprJz+g4S4bS6KKz6dzz81ergnTfpWpT0TXKd3btTjF7Ksc4Uovr/B0Ct4+0Slaup5hZTxt9Vwcd1W6bqzVCTTk9so+n3Kqbjz8xpyXLXc1x70zyyWukaj8WqsW1p1tFvHWqfEvinqk7mFV29GME1mCb54Oeyhve7nPoZU4T2rHLOrl8x1XTvijKVfZfW6jTawnHlproy/n49s60IRsnGdSUHJp+hw+VzCnRk66cdmOe59NpWlGdKtTawn1jJP8A1wTtfmber1xXF/fO7uavzec7s9TrfhWlCl4esFDGHSUuO75ZxGpfOtRSjJRikuGda+Gt27rwnaRck5UnKD78P1MYf06cs/WaerBHAydXnSAAAAAAAAAAAAAAAAAAIyMkgD4dVsqOp6dcWVw/6VaDhLuvdfbqcg1bQNS0aSpXFKc4LO24pxcoTS7tdPsztjPKfEDVauk6JWrW6UasliM/VPusGM8ZlHTjzuNcI1Wu6ULi6hGMnH9K7Nv1NEXaXco1rKV3Ka4m7hRw1hdNvvkXdapXU5VXulPq0+X9zdptOMYOa4UfTuJ1NLe7t9UYQ2Y/T7/k10FTjJuUlw/RmFWU51HTgm31x2M5afVp01Uppye3MibdJh0mcIqbqKnGptjmKmsrPo2VdK5ry1GHzqVClGFJ05fKhtVXs2u+cF3QaqUtqWIvOV6sqLj6KzXDaeCzKudx72vdB0m81y9lRsoxcow3uLmopL/Z2nwLo1xoeju3vKkZVJ1HNRp8qK+/qcBsr6tY3lK5oYjOm8xxlo7p4M8W09ZtYfPcKc48S3T5b/gSTe0yt1p67Ps/wTl9v2IhJSSa6MzNuaMkgjAEggkAAAAAAAAAAAABABtIxbb6L/ZlgxqTjTW6clGPdvAGMoza/Vj7cHPfitNx0fZvqOW5PrnKPbahqllY091zd06SfTnlnIvijqMqs4U6VenOlPn+nPP5I1JXgK6eM8Z92j6rDcraWOueVg+BKKWaklCLf3k/si30raoOOxrd0Unltd/ZGa6Rt0qdKjeupWUcYx9Usfueijd2lCNym4RWEk3JSznsl1PPytqcp42Jt84a6n1UreMas8U/pcVjg516cMpMdPkpxc92zChnJV6k1G5lysrryeh+TOLxTotPGOXw/sUWqqKq/LW3f1TfSXt7M1HnyfF8zc1xjn0w/wCD0HhvWqun11BVE6cpLOVhL3a9eDzlvTqV60aNNL5k3hRZd2HhzVatw1BUsweMuXBbUmFy8d68OanZ6hbrydXdj3w374L1Nrr0OE6TU1TQqsKlVpKm8PZP/wBOx+H9UpapYQrUv1JYks5wzUyYywuK0UkZEBGmEgAAAAAAA0eZp92PM0+7K7cNwFj5mn3f4Hmafd/grtw3MCx8zT7v8DzNPu/wV25jcBYu5p46v8FL4irwrUNtLEptYjFr1ZvcivuKTnPe28rojGfcdOPUy2815K8jpVenWsYq63/04blz25/JQ+IPDlfUaVrS0y2oq9hHNT5j2xj6c8M9pXhVlVdRviPODXRobJ/Mw90uZPJzxwsr0580uOnK6vw/8QUqzlV8jP6XJpXDeX2f0mieieILCalK2jPPMnTnubf7cHWqsW8t5e5/sV9zRbzg66eVz6jqV3Tj/cW06dTnO6PBqd1WVd11X/x4afQ9fd6aqze5LnqfDS0GHzHJ01nJix0mShdzqF7BQtadavVksZiuj7nyvwf4kuHKpK1is85lWisnRrCwjSisRS9i3pxxHDXBZGbXLNN8ManYaxby1KgoQUknOM1JdOv8ZPZ0YR/+ZcVqEvqhcbFKMfdI+3WqcnThPGXB/lFNTnVVhUoxeIzuYzaX/ZM5cl1Xt/F18rKppVe8dza01R+bWX0qq8JcerSZe+CtE1XQ6n95WtHTksNUpyl+MpDSrbbJXH6pYXGfQ9BCeY7u5vjnW3m/Iz+sulp5iHuPMQ9/wVqkTuOrzrHzNPu/wT5iHuVu4bhtFl5iHuQ7iHuV29jcxsWPmYeufwPNQ9/wV24jcBhkGIyVWYyYZGQM8kNmLZGQJbNc8NE5MZMD56sE/pXR8mucFjC7G+XX9jGSJofJOHBonRT9D7mjDaFV0rZP0EbWK9Cx+WT8sD44UUvQ3xhwbthO0ivlrW8akXGSyfHS0eDrNuKUc9C32o2QST6dSWS+ktnibemqUUkfQvp6dPU1rBmmaZt22pk5NUXjr0MsgZ5BhkZKM8jJhkAZZGTFsjcBhkZMMojJRsyMmGSMgbMjJryMgZZIbMWyGyCWYsDIGLQwSAGBgkZAjAwAQDJdTEAbUyUzWmMlG3cTuNeRuA2qQyasjIG3Iyatw3FGzIya8jIGAyAAyMgBDJGQApkZAIIBAAkEACSQAIBAAkgACUyckACSQAGQ2QChknIAEeoyAB//2Q==");
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    #score {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff5722;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Whack-a-Mole</h1>
+  <div id="score">Score: 0</div>
+  <div class="grid" id="grid"></div>
+  <button onclick="startGame()" style=" padding: 12px 24px;font-size: 16px; border: none; border-radius: 30px; background: linear-gradient(90deg, #ff4b2b, #ff416c); color: white; font-weight: bold; cursor: pointer;  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);">Restart <i class="fas fa-rotate-right"></i></button><br><br><br>
+  <a href="file:///C:/Users/WELCOME/Desktop/full/templates/index.html">Back to dashboard</a>
+
+  <script src="C:\Users\WELCOME\Desktop\full\static\js\whack.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+</body>
+</html>

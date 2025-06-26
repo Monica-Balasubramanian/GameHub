@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Game Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .hub-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-top: 2rem;
+      color: #fff;
+      text-shadow: 0 0 10px #00c9a7, 0 0 20px #00c9a7;
+    }
+
+    .game-circle-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 2rem;
+      padding: 3rem;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .game-tile {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 140px;
+      width: 140px;
+      text-align: center;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .game-tile:hover {
+      transform: scale(1.1);
+      background: rgba(0, 201, 167, 0.2);
+      border-color: #00c9a7;
+      box-shadow: 0 0 20px #00c9a7;
+    }
+
+    @media (max-width: 600px) {
+      .hub-title {
+        font-size: 2rem;
+      }
+
+      .game-tile {
+        height: 100px;
+        width: 100px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="hub-title">🎮 Mini Game Hub</h1>
+
+  <div class="game-circle-grid">
+    <a href="C:\Users\WELCOME\Desktop\full\templates\tictactoe.html" class="game-tile">Tic Tac Toe</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\memory.html" class="game-tile">Memory Flip</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\rps.html" class="game-tile">Rock Paper Scissors</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\2048.html" class="game-tile">2048</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\whack.html" class="game-tile">Whack-a-Mole</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\typing.html" class="game-tile">Typing Test</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\simon.html" class="game-tile">Simon Says</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\guess.html" class="game-tile">Guess Number</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\hangman.html" class="game-tile">Hangman</a>
+      <a href="C:\Users\WELCOME\Desktop\full\templates\scramble.html" class="game-tile">scramble</a>
+  </div>
+
+</body>
+</html>

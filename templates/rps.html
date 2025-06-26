@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="C:\Users\WELCOME\Desktop\full\static\css\style.css" />
+  <style>
+      body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+      }
+
+    .rps-buttons {
+      margin: 20px auto;
+    }
+
+    .rps-buttons button {
+      font-size: 2rem;
+      padding: 10px 30px;
+      margin: 0 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #result, #score {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    
+
+    
+  </style>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+  <div class="rps-buttons">
+    <button onclick="play('rock')">✊ Rock</button>
+    <button onclick="play('paper')">✋ Paper</button>
+    <button onclick="play('scissors')">✌️ Scissors</button>
+  </div>
+  <div id="result"></div>
+  <div id="score">You: 0 | Computer: 0</div><br>
+  <button onclick="startGame()" style=" padding: 12px 24px;font-size: 16px; border: none; border-radius: 30px; background: linear-gradient(90deg, #ff4b2b, #ff416c); color: white; font-weight: bold; cursor: pointer;  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);">Restart</i></button><br><br><br>
+  <a href="file:///C:/Users/WELCOME/Desktop/full/templates/index.html">Back to dashboard</a>
+  <script src="C:\Users\WELCOME\Desktop\full\static\js\rps.js"></script>
+</body>
+</html>
